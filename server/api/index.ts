@@ -1,8 +1,7 @@
 import type { IncomingMessage, ServerResponse } from 'http';
-import { createApp } from '../src/app';
+import app from '../src/app';
 import { connectDB } from '../src/config/db';
 
-const app = createApp();
 let ready: Promise<void> | null = null;
 
 export default async function handler(req: IncomingMessage, res: ServerResponse) {
